@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desain.css">
+    <title>Register - Landing Page</title>
+</head>
+<body>
+<main class="hero">
+    <form class="login" action="register.php" method="POST">
+        <h2>Register</h2>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            minlength="3"
+            maxlength="50"
+            pattern="[a-zA-Z0-9_]+"
+            title="Gunakan huruf, angka, atau underscore"
+            autocomplete="username"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password (minimal 8 karakter)"
+            minlength="8"
+            autocomplete="new-password"
+            required
+        >
+
+        <input
+            type="password"
+            name="konfirmasi"
+            id="konfirmasi"
+            placeholder="Konfirmasi Password"
+            minlength="8"
+            autocomplete="new-password"
+            required
+        >
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="show-password" onclick="togglePassword()">
+            <label for="show-password">Tampilkan Password</label>
+        </div>
+
+        <button type="submit" name="submit">Daftar</button>
+
+        <p>Sudah punya akun? <a href="belajar.html">Silahkan Login</a></p>
+    </form>
+</main>

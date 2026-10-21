@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="desain.css">
-    <title>Landing Page</title>
+    <title>Login - Landing Page</title>
 </head>
 <body>
     <nav class="wrapper">
@@ -21,18 +21,31 @@
         </ul>
     </nav>
 
-    <form class="login">
-    <input type="text">
-    <input type="password">
-    <button type="submit">login</button>
-    
-    </form>
     <main class="hero">
-        <div class="box">
-            <h1>Selamat Datang 👋</h1>
-            <p>Saya Mahasiswa JTEK Angkatan 2025, saya sedang belajar membuat Navigation Bar dan Landing Page Menggunakan HTML dan CSS.</p>
-            <a href="https://github.com/Raphzz67" target="_blank" class="btn">Profil Github</a>
-        </div>
+        <form class="login" action="login.php" method="POST">
+            <h2>Login</h2>
+            
+            <input type="text" name="username" placeholder="Masukkan Username" required autocomplete="username">
+            
+            <input type="password" name="password" id="password" placeholder="Masukkan Password" required autocomplete="current-password">
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="show-password" onclick="togglePassword()">
+                <label for="show-password">Tampilkan Password</label>
+            </div>
+            
+            <button type="submit" name="submit">Log In</button>
+            
+            <p>Belum punya akun? <a href="register.html">Sign Up</a></p>
+        </form>
     </main>
+
+    <script>
+        function togglePassword() {
+            var pass = document.getElementById('password');
+            var checkbox = document.getElementById('show-password');
+            pass.type = checkbox.checked ? 'text' : 'password';
+        }
+    </script>
 </body>
 </html>

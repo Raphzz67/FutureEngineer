@@ -97,7 +97,7 @@ body {
     min-height: 100vh;
     width: 100%;
     padding-top: 80px;
-    background-image: url(Porsche.png);
+    background-image: url(Hamilton.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,115 +107,11 @@ body {
     align-items: center;
 }
 
-.box {
-    position: relative;
-    padding: 40px 50px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    text-align: center;
-    max-width: 450px;
-    width: 90%;
-    overflow: hidden;
-    background-image: url('Hamilton.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: translateY(200px);
-    opacity: 0;
-    animation: slideUp 1s ease-out 0.2s forwards;
-}
 
-.box::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 16px;
-    z-index: 1;
-}
-
-.box h1,
-.box p,
-.box .btn {
-    position: relative;
-    z-index: 2;
-}
-
-.box h1 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-size: 28px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-}
-
-.box p {
-    color: #f0f0f0;
-    margin-bottom: 25px;
-    line-height: 1.6;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.6);
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(200px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .wrapper {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-    }
-
-    .navigation {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .navigation > li > a {
-        font-size: 16px;
-    }
-
-    .hero {
-        padding-top: 180px;
-    }
-
-    .box {
-        padding: 30px 25px;
-    }
-
-    .box h1 {
-        font-size: 22px;
-    }
-}
 
 .login {
-    margin-top: 250px;
-    border: 1px solid whitesmoke;
+    margin-top: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     font-size: 14px;
     display: flex;
@@ -227,8 +123,34 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 24px;
-    background-image: url('tes.jpg');
+    background-color: rgba(255, 255, 255, 0.678);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.navigation > li.welcome-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    margin-right: 5px;
+    white-space: nowrap; 
+}
+
+
+.navigation > li > a.logout-btn {
+    background-color: crimson;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation > li > a.logout-btn:hover {
+    background-color: darkred;
+    color: white;
 }
